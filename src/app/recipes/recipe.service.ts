@@ -1,6 +1,8 @@
 import {Recipe} from './recipe.model';
+import {EventEmitter} from '@angular/core';
 
 export class RecipeService {
+    recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
         new Recipe('Recipe 1', 'Test Desc', 'http://www.solidbackgrounds.com/images/2560x1440/2560x1440-black-solid-color-background.jpg'),
